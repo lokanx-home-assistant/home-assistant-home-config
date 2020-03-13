@@ -1,0 +1,47 @@
+person.bjorn:
+    entity_picture: "/local/person/bjorn.png"
+person.annelie:
+    entity_picture: "/local/person/annelie.png"
+person.anton:
+    entity_picture: "/local/person/anton.png"
+person.emma:
+    entity_picture: "/local/person/emma.png"
+person.jasmine:
+    entity_picture: "/local/person/jasmine.png"
+# Björn
+device_tracker.bphone:
+    entity_picture: "/local/person/bjorn.png"
+device_tracker.bphone_bt:
+    entity_picture: "/local/person/bjorn.png"
+device_tracker.bphonewrt:
+    entity_picture: "/local/person/bjorn.png"
+device_tracker.bphone_2:
+    entity_picture: "/local/person/bjorn.png"
+# Annelie
+device_tracker.annelies_iphone:
+    entity_picture: "/local/person/annelie.png"
+device_tracker.annelies_iphone_2:
+    entity_picture: "/local/person/annelie.png"
+device_tracker.annelies_iphone_3:
+    entity_picture: "/local/person/annelie.png"
+device_tracker.anneliesiphone:
+    entity_picture: "/local/person/annelie.png"
+device_tracker.annelies_iphone_bt:
+    entity_picture: "/local/person/annelie.png"
+# Anton
+device_tracker.anton:
+    entity_picture: "/local/person/anton.png"
+# Emma
+device_tracker.emmaiphone:
+    entity_picture: "/local/person/emma.png"
+# Jasmine
+device_tracker.jasmineiphone:
+    entity_picture: "/local/person/jasmine.png"
+device_tracker.jasmine_iphone:
+    entity_picture: "/local/person/jasmine.png"
+device_tracker.jasmine_iphone_2:
+    entity_picture: "/local/person/jasmine.png"
+device_tracker.jasmine_iphone_bt:
+    entity_picture: "/local/person/jasmine.png"
+device_tracker.cmee_6204836272:
+    entity_picture: "/local/person/jasmine.png"

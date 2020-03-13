@@ -1,0 +1,12 @@
+- alias: Turn on basement light when there is movement
+  initial_state: 'on'
+  trigger:
+  - entity_id: binary_sensor.tradfri_motion_sensor
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: light.lampa_hallen
+    entity_id: light.lampa_hallen
+    service: light.turn_on

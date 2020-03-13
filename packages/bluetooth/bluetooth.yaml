@@ -1,0 +1,3 @@
+bluetooth_bluetooth:
+  device_tracker:
+    - platform: bluetooth_tracker

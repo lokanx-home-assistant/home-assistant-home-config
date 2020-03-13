@@ -1,0 +1,106 @@
+corona_corona:
+  automation manual: !include_dir_merge_list includes/automations
+
+  sensor:
+    - platform: rest
+      resource: http://henrikhjelm.se/api/corona.json
+      name: Coronavirus bekräftade Sverige
+      value_template: '{{ value_json.corona | int }}'
+      scan_interval: 15
+      unit_of_measurement: 'antal'
+    
+    - platform: rest
+      resource: http://henrikhjelm.se/api/local.json
+      name: COVID-19-Sverige
+      scan_interval: 15
+      json_attributes:
+        - "Totala antalet"
+    #    - lastupdate
+        - Stockholm
+        - VastraGotaland
+        - Skane
+        - Varmland
+        - Jonkoping
+        - Uppsala
+        - Vasterbotten
+        - Halland
+        - Örebro
+        - Gavleborg
+        - Norrbotten
+        - Sodermanland
+        - Östergotland
+        - Kalmarlan
+        - Kronoberg
+        - Jamtland/Harjedalen
+        - Dalarna
+        - Blekinge
+        - Vasternorrland
+        - Vastmanland
+        - Gotland
+        - googlesaythis
+      value_template: '{{ value_json.lastupdate }}'
+    - platform: template
+      sensors:
+        covid_19_sverige_totala_antalet: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Totala antalet"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionstockholm: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Stockholm"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_vastragotalandsregionen: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["VastraGotaland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionskane: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Skane"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionvarmland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Varmland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionjonkopingslan: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Jonkoping"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionuppsala: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Uppsala"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionvasternorrland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Vasternorrland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionhalland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Halland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionorebrolan: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Örebro"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regiongavleborg: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Gavleborg"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionnorrbotten: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Norrbotten"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionsodermanland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Sodermanland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionostergotland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Östergotland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionkalmarlan: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Kalmarlan"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionkronoberg: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Kronoberg"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionjamtlandharjedalen: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Jamtland/Harjedalen"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regiondalarna: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Dalarna"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_blekinge: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Blekinge"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regionvastmanland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Vastmanland"] }}'
+          unit_of_measurement: 'Personer'
+        covid_19_sverige_regiongotland: 
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Gotland"] }}'
+          unit_of_measurement: 'Personer'

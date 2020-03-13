@@ -1,0 +1,8 @@
+deconz_refresh:
+  alias: (EDIT) deCONZ Refresh
+  sequence:
+  - service: deconz.device_refresh
+'1583961590782':
+  alias: (EDIT) Testing
+  sequence:
+  - delay: '3'

@@ -1,0 +1,41 @@
+title: Surveillance
+cards:      
+  - type: picture-entity
+    name: Front Detection
+    entity: camera.person_detection_front_tensorflow
+  - type: entities
+    title: Front Sensors
+    show_header_toggle: false
+    entities:
+      - sensor.aeotec_zw074_multisensor_gen5_relative_humidity
+      - sensor.aeotec_zw074_multisensor_gen5_burglar
+      - sensor.aeotec_zw074_multisensor_gen5_luminance
+      - sensor.aeotec_zw074_multisensor_gen5_temperature
+      - binary_sensor.aeotec_zw074_multisensor_gen5_sensor
+  - type: picture-entity
+    name: Back Detection
+    entity: camera.person_detection_back_tensorflow
+  - type: entities
+    title: Back Sensors
+    show_header_toggle: false
+    entities:
+      - sensor.aeotec_zw074_multisensor_gen5_luminance_2
+      - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_2
+      - sensor.aeotec_zw074_multisensor_gen5_temperature_2
+      - sensor.aeotec_zw074_multisensor_gen5_burglar_2
+      - binary_sensor.aeotec_zw074_multisensor_gen5_sensor_2
+  - type: entities
+    title: Front Automations
+    show_header_toggle: false
+    entities:
+      - automation.person_detected_front_notify
+      - automation.motion_front_detected_notify_on
+      - automation.motion_front_detected_notify_off
+  - type: entities
+    title: Back Automations
+    show_header_toggle: false
+    entities:
+      - automation.person_detected_back_notify
+      - automation.motion_back_detected_notify_on
+      - automation.motion_back_detected_notify_off
+ 

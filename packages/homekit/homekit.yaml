@@ -1,0 +1,29 @@
+homekit_homekit:
+  homekit:
+    auto_start: false
+    filter:
+      include_domains:
+        - light
+        - media_player
+        - switch
+        - script
+      exclude_entities:
+        - script.deconz_refresh
+        - switch.myvolvo_engine
+        - switch.myvolvo_heater
+    entity_config:
+      switch.everspring_an179_in_wall_on_off_module_switch_2:
+        name: Emma Ceiling Light
+      switch.everspring_an179_in_wall_on_off_module_switch:
+        name: Jasmine Ceiling Light
+      switch.telldus_tzwp_100_plug_in_switch_switch_2:
+        name: Upper Stairway Window Light
+      switch.telldus_tzwp_100_plug_in_switch_switch:
+        name: Library Window Light
+      switch.powerswitch01:
+        name: CMEE Watch Charger
+      light.everspring_ad147_plug_in_dimmer_module_level:
+        name: Back Entrance Window Light
+
+  automation manual: !include_dir_merge_list includes/automations
+    

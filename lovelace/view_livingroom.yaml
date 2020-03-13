@@ -1,0 +1,37 @@
+title: Livingroom
+cards:      
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.golvlampa_vardagsrum
+        name: Floor Light
+      - entity: light.everspring_ad147_plug_in_dimmer_module_level
+        name: Back Entrance Window Light
+      - entity: light.dining_table_light_livingroom
+        name: Dining Table Light
+      - entity: light.tv_table_light_livingroom
+        name: TV Table Light
+      - entity: light.lightbenjamin
+        name: Benjamin Ceiling Light
+  - type: entities
+    title: Remotes
+    show_header_toggle: false
+    entities:
+      - remote.sjogren_tv_4k
+      - media_player.googlehome4367
+      - sensor.active_livingroom_area_scene
+  - type: entities
+    title: IPTV Box
+    show_header_toggle: false
+    entities:
+      - entity: sensor.iptv_box_power_on
+        name: Power On
+  - type: media-control
+    entity: media_player.livingroom_tv
+  - type: media-control
+    entity: media_player.sjogren_tv_4k
+  - type: media-control
+    entity: media_player.denon
+  - type: media-control
+    entity: media_player.googlehome4367
+      

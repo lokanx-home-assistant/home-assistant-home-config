@@ -1,0 +1,11 @@
+- alias: Livingroom Area Lights - Activate Night
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - entity_id: input_select.livingroom_area_scenes
+    platform: state
+    to: las_night
+  condition: []
+  action:
+  - entity_id: scene.livingroom_area_lights_night
+    service: scene.turn_on

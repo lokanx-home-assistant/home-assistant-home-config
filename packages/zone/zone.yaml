@@ -1,0 +1,42 @@
+zone_zone:
+  zone:
+    - name: Work Björn
+      latitude: !secret zone_work_bjorn_latitude
+      longitude: !secret zone_work_bjorn_longitude
+      radius: 150
+      icon: mdi:briefcase
+    - name: Work Annelie
+      latitude: !secret zone_work_annelie_latitude
+      longitude: !secret zone_work_annelie_longitude
+      radius: 150
+      icon: mdi:briefcase
+    - name: Föräldrar Björn
+      latitude: !secret zone_parents_bjorn_latitude
+      longitude: !secret zone_parents_bjorn_longitude
+      radius: 150
+      icon: mdi:home-map-marker
+    - name: Sommarstugan
+      latitude: !secret zone_hallsunga_summerhouse_latitude
+      longitude: !secret zone_hallsunga_summerhouse_longitude
+      radius: 250
+      icon: mdi:home-circle
+    - name: Bräcke
+      latitude: !secret zone_parents_annelie_latitude
+      longitude: !secret zone_parents_annelie_longitude
+      radius: 250
+      icon: mdi:home-map-marker
+    - name: Värmdö Home
+      latitude: !secret zone_home_mamman_latitude
+      longitude: !secret zone_home_mamman_longitude
+      radius: 150
+      icon: mdi:home-map-marker
+    - name: School Anton
+      latitude: !secret zone_school_anton_latitude
+      longitude: !secret zone_school_anton_longitude
+      radius: 250
+      icon: mdi:school
+    - name: School Emma
+      latitude: !secret zone_school_emma_latitude
+      longitude: !secret zone_school_emma_longitude
+      radius: 250
+      icon: mdi:school

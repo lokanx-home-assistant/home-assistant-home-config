@@ -1,0 +1,14 @@
+title: Benjamin
+cards:      
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.lightbenjamin
+        name: Ceiling Light
+      - entity: light.benjamin_window_light
+        name: Window Light
+  - type: entities
+    title: Sensors
+    show_header_toggle: false
+    entities:
+      - binary_sensor.tradfri_motion_sensor_2

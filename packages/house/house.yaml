@@ -1,0 +1,13 @@
+house_house:
+  light:
+    # All lights
+    - platform: group
+      name: All Lights
+      entities:
+        - light.jasmine_lights
+        - light.livingroom_area_lights
+        - light.emma_lights
+        - light.benjamin_lights
+        - light.stairwell_lights
+        - light.basement_lights
+        - light.master_bedroom_lights

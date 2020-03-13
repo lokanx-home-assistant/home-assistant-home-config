@@ -1,0 +1,4 @@
+breaking_changes_breaking_changes:
+  breaking_changes:
+    name: potential breaking changes
+    scan_interval: 60

@@ -1,0 +1,14 @@
+- alias: Krisinformation Alert Stockholm
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - entity_id: sensor.krisinformation_stockholm
+    platform: state
+    to: Alert
+  condition: []
+  action:
+  - data:
+      title: Krisinformation Warning - Stockholm
+      message: > 
+        {{states.sensor.krisinformation_stockholm.attributes.messages[0].Headline}} - {{states.sensor.krisinformation_stockholm.attributes.messages[0].Message}} {{states.sensor.krisinformation_stockholm.attributes.messages[0].Web}}
+    service: notify.mobile_app_bphone

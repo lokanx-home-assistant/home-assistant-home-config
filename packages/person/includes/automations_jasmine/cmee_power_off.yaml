@@ -1,0 +1,30 @@
+- alias: CMEE Power Off
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /3
+  condition:
+  - condition: and
+    conditions:
+    - condition: template
+      value_template: "{% set device = 'device_tracker.cmee_6204836272' -%} {% set\
+        \ threshold = 93 -%} {% set battery = state_attr(device, 'battery') -%} {%\
+        \ set ns = namespace(found=false) -%} {% if battery > threshold -%}\n  {%\
+        \ set ns.found = true -%}\n{% endif -%} {{ ns.found }}\n"
+    - condition: state
+      entity_id: switch.powerswitch01
+      state: 'on'
+  action:
+  - service: logbook.log
+    data:
+      name: 'CMEE Charger - '
+      message: '{% set device = ''device_tracker.cmee_6204836272'' -%} {%- set threshold
+        = 93 -%} {%- set battery = state_attr(device, ''battery'') -%} Turning off
+        charger since battery level is {{battery}}%,  above the {{threshold}}% threahold
+        value
+
+        '
+  - service: switch.turn_off
+    data:
+      entity_id: switch.powerswitch01

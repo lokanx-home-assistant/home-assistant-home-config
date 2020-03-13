@@ -1,0 +1,15 @@
+- alias: Send message if number of corona deaths changes
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - entity_id: sensor.sweden_coronavirus_deaths
+    platform: state
+  condition: []
+  action:
+  - data:
+      message: 'Number of corona deaths in sweden has changed to {{ states(''sensor.sweden_coronavirus_deaths'')
+        }}.
+        '
+      title: Corona Alert
+    service: notify.mobile_app_bphone
+

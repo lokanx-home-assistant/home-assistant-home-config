@@ -1,0 +1,25 @@
+room_emma_room_emma:
+
+  apple_tv:
+    - address: 192.168.1.239
+      identifier: !secret apple_tv_identifier_4
+      name: Sjogren TV
+      protocol: MRP
+      credentials:
+        mrp: !secret apple_tv_credentials_4_mrp
+        airplay: !secret apple_tv_credentials_4_airplay
+      start_off: true
+
+  timer:
+    emma_wake_up_routine_timer:
+      name: Emma Wake Up Routine Timer
+      duration: '00:15:00'
+
+  light:
+    - platform: switch
+      name: Emma Ceiling Light
+      entity_id: switch.everspring_an179_in_wall_on_off_module_switch_2
+    - platform: group
+      name: Emma Lights
+      entities:
+        - light.emma_ceiling_light

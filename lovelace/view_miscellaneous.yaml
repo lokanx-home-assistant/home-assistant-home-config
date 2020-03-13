@@ -1,0 +1,34 @@
+title: Miscellaneous
+cards:      
+  - type: entities
+    title: Various
+    show_header_toggle: false
+    entities:
+      - automation.start_homekit
+      - binary_sensor.remote_ui
+  - type: entities
+    title: Commands
+    show_header_toggle: false
+    entities:
+      - entity: script.apple_tv
+        name: Activate TV & Apple TV in living room
+      - entity: script.livingroom_goodnight
+        name: Turn off TV in living room
+      - entity: script.linjar_tv
+        name: Activate TV & IPTV in living Room
+      - entity: script.myvolvo_engine_start
+        name: Activate Start Car
+      - entity: script.myvolvo_engine_stop
+        name: Activate Stop Car
+  - type: custom:group-card
+    card:
+      type: entities
+      title: Battery Levels
+      show_header_toggle: false
+    group: group.battery_levels
+  - type: custom:group-card
+    card:
+      type: entities
+      title: NUC System Monitor
+      show_header_toggle: false
+    group: group.nuc_system_monitor

@@ -1,0 +1,16 @@
+- alias: emma-wake-up-routine-actions-abort
+  description: ''
+  trigger:
+  - entity_id: switch.everspring_an179_in_wall_on_off_module_switch_2
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: timer.emma_wake_up_routine_timer
+    state: active
+  action:
+  - data:
+      entity_id: timer.emma_wake_up_routine_timer
+    service: timer.cancel
+  initial_state: 'on'

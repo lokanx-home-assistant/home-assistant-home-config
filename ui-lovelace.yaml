@@ -1,0 +1,30 @@
+title: Home
+resources:
+  - url: /local/sl-card.js
+    type: js 
+  - url: /local/pollenkoll-card.js
+    type: js
+  - url: /local/community/group-card/group-card.js
+    type: module
+  - url: /local/community/lovelace-card-tools/card-tools.js
+    type: module  
+  - url: /local/community/krisinfo-card/krisinfo-card.js
+    type: js    
+  - url: /local/community/icloud3/icloud3-event-log-card.js?v=1.000
+    type: js
+  - url: /local/community/lovelace-layout-card/layout-card.js
+    type: module
+views:
+  - !include lovelace/view_general.yaml
+  - !include lovelace/view_surveillance.yaml
+  - !include lovelace/view_devices.yaml
+  - !include lovelace/view_alarm.yaml
+  - !include lovelace/view_livingroom.yaml
+  - !include lovelace/view_basement_storage.yaml
+  - !include lovelace/view_upper_stairwell.yaml
+  - !include lovelace/view_master_bedroom.yaml
+  - !include lovelace/view_benjamin.yaml
+  - !include lovelace/view_emma.yaml
+  - !include lovelace/view_jasmine.yaml
+  - !include lovelace/view_anton.yaml
+  - !include lovelace/view_miscellaneous.yaml

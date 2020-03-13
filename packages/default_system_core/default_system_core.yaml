@@ -1,0 +1,40 @@
+default_system_core_default_system_core:
+  # Lovelace
+  lovelace:
+    mode: yaml
+
+  # Recorder
+  recorder:
+    purge_keep_days: 10
+    purge_interval: 1
+    db_url: !secret recorder_db_url
+
+  # API
+  api:
+
+  # enables `wake_on_lan` domain
+  wake_on_lan: 
+
+  # Video playing for cameras
+  ffmpeg:
+
+  # Discover some devices automatically
+  discovery:
+    ignore:
+      - igd
+
+  # Python scripts
+  python_script:
+
+  # Logger
+  logger:
+#    default: fatal
+
+  sensor:
+    - platform: template
+      sensors:
+        system_space_entity:
+          friendly_name: "System Space Entity"
+          value_template: " "
+          icon_template: mdi:blank
+ 

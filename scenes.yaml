@@ -1,0 +1,296 @@
+- id: '1583277354420'
+  name: Livingroom Area Lights All Off
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'off'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'off'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'off'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
+    light.lightbenjamin:
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'off'
+      supported_features: 41
+- id: '1583277480337'
+  name: Livingroom Area Lights All On
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'on'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      brightness: 253
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      brightness: 250
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'on'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      brightness: 253
+      color_temp: 454
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.lightbenjamin:
+      brightness: 253
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      brightness: 253
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1583277839496'
+  name: Livingroom Area Lights Night
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'on'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'off'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      brightness: 147
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'on'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      brightness: 96
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.lightbenjamin:
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'off'
+      supported_features: 41
+- id: '1583277888064'
+  name: Livingroom Area Lights Cozy
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'on'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'off'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      brightness: 155
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'on'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      brightness: 113
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.lightbenjamin:
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      brightness: 137
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1583277888074'
+  name: Livingroom Area Lights TV
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'on'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      brightness: 86
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      brightness: 167
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'on'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      brightness: 33
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.lightbenjamin:
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      brightness: 83
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1583277888084'
+  name: Livingroom Area Lights Dinner
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'on'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      brightness: 212
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      brightness: 155
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'on'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      brightness: 158
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.lightbenjamin:
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'off'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'off'
+      supported_features: 41
+- id: '1583277888094'
+  name: Livingroom Area Lights Evning
+  entities:
+    light.benjamin_window_light:
+      friendly_name: Benjamin Window Light
+      state: 'on'
+      supported_features: 0
+    light.dining_table_light_livingroom:
+      brightness: 184
+      friendly_name: Dining Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+    light.everspring_ad147_plug_in_dimmer_module_level:
+      brightness: 155
+      friendly_name: zwave_plug_dimmer_001
+      node_id: 2
+      state: 'on'
+      supported_features: 1
+      value_id: '72057594076299265'
+      value_index: 0
+      value_instance: 1
+    light.golvlampa_vardagsrum:
+      brightness: 169
+      friendly_name: Floor Light Livingroom
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.lightbenjamin:
+      brightness: 205
+      friendly_name: LightBenjamin
+      is_deconz_group: false
+      max_mireds: 500
+      min_mireds: 153
+      state: 'on'
+      supported_features: 43
+    light.tv_table_light_livingroom:
+      brightness: 137
+      friendly_name: TV Table Light Livingroom
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41

@@ -1,0 +1,19 @@
+title: Emma
+cards:     
+  - type: media-control
+    entity: media_player.sjogren_tv
+  - type: entities
+    title: Remotes
+    show_header_toggle: false
+    entities:
+      - remote.sjogren_tv
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.emma_ceiling_light
+        name: Ceiling Light
+  - type: entities
+    title: Automations
+    show_header_toggle: false
+    entities:
+      - timer.emma_wake_up_routine_timer

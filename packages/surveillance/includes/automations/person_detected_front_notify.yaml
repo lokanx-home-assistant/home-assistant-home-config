@@ -1,0 +1,17 @@
+- alias: Person Detected Front - Notify
+  trigger:
+  - platform: mqtt
+    topic: homeassistant/persondetected/tensorflow/front
+  condition: []
+  action:
+  - data:
+      message: Person detected in front of the house
+    service: notify.notifier_telegram_events
+  - data:
+      data:
+        photo:
+          caption: Latest Front Camera Detection - Tensorflow
+          file: /srv/shared-data/image_detection/tensorflow_ma_front_latest.jpg
+      message: ''
+    service: notify.notifier_telegram_events
+  initial_state: 'on'

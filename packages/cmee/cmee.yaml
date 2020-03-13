@@ -1,0 +1,16 @@
+cmee_cmee:
+  device_tracker:
+    - platform: cmee
+      username: !secret cmee_username
+      password: !secret cmee_password
+      interval_seconds: 60
+      force_interval: True
+
+  sensor:
+    - platform: template
+      sensors:
+         cmee_6204836272_battery:
+            friendly_name: "Jasmine CMEE Watch Battery"
+            unit_of_measurement: '%'
+            value_template: "{{ state_attr('device_tracker.cmee_6204836272', 'battery') }}"
+            icon_template: mdi:battery

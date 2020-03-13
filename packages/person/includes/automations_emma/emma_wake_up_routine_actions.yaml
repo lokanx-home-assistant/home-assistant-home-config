@@ -1,0 +1,20 @@
+- alias: emma-wake-up-routine-actions
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: timer.emma_wake_up_routine_timer
+    event_type: timer.finished
+    platform: event
+  condition:
+  - condition: state
+    entity_id: switch.everspring_an179_in_wall_on_off_module_switch_2
+    state: 'off'
+  action:
+  - data:
+      message: '... what a wonderful day!'
+      name: Good morning Emma...
+    service: logbook.log
+  - data:
+      entity_id: switch.everspring_an179_in_wall_on_off_module_switch_2
+    service: switch.turn_on
+  initial_state: 'on'

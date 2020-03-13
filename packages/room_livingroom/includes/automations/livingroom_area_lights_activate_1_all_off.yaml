@@ -1,0 +1,11 @@
+- alias: Livingroom Area Lights - Activate All Off
+  description: ''
+  initial_state: 'on'
+  trigger:
+  - entity_id: input_select.livingroom_area_scenes
+    platform: state
+    to: las_all_off
+  condition: []
+  action:
+  - entity_id: scene.livingroom_area_lights_all_off
+    service: scene.turn_on

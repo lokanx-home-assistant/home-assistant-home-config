@@ -1,0 +1,306 @@
+room_livingroom_room_scripts_livingroom_iptv:
+  script:
+
+    linjar_tv:
+      alias: IPTV
+      sequence:
+      - data:
+          entity_id: media_player.livingroom_tv
+        service: media_player.turn_on
+      - delay: 00:00:05
+      - data:
+          entity_id: media_player.livingroom_tv
+          source: IPTV
+        service: media_player.select_source
+
+    iptv_box_power_on:
+      alias: Sätt På IPTV
+      sequence:
+      - data:
+          entity_id: media_player.livingroom_tv
+        service: media_player.turn_on
+      - data:
+          entity_id: media_player.livingroom_tv
+          source: IPTV
+        service: media_player.select_source
+      - service: python_script.broadlink_send_power
+      - data:
+          entity_id: input_boolean.iptv_box_power_on
+        service: input_boolean.toggle
+
+    iptv_box_power_off:
+      alias: Stäng Av IPTV
+      sequence:
+      - service: python_script.broadlink_send_power
+      - data:
+          entity_id: input_boolean.iptv_box_power_on
+        service: input_boolean.toggle
+
+    iptv_box_show_guide:
+      alias: Visa IPTV Guide
+      sequence:
+      - service: python_script.broadlink_send_menu
+      - service: python_script.broadlink_send_right
+      - service: python_script.broadlink_send_right
+      - delay: 00:00:01
+      - service: python_script.broadlink_send_ok
+
+    iptv_box_hide_guide:
+      alias: Göm IPTV Guide
+      sequence:
+      - service: python_script.broadlink_send_exit
+
+    iptv_box_svt_1:
+      alias: IPTV Svt 1
+      sequence:
+      - service: python_script.broadlink_send_1
+
+    iptv_box_svt_2:
+      alias: IPTV Svt 2
+      sequence:
+      - service: python_script.broadlink_send_2
+
+    iptv_box_kanal_3:
+      alias: IPTV Kanal 3
+      sequence:
+      - service: python_script.broadlink_send_3
+
+    iptv_box_kanal_4:
+        alias: IPTV Kanal 4
+        sequence:
+        - service: python_script.broadlink_send_4
+
+    iptv_box_kanal_5:
+        alias: IPTV Kanal 5
+        sequence:
+        - service: python_script.broadlink_send_5
+
+    iptv_box_kanal_6:
+        alias: IPTV Kanal 6
+        sequence:
+        - service: python_script.broadlink_send_6
+
+    iptv_box_kanal_7:
+        alias: IPTV Kanal 7
+        sequence:
+        - service: python_script.broadlink_send_7
+
+    iptv_box_kanal_8:
+        alias: IPTV Kanal 8
+        sequence:
+        - service: python_script.broadlink_send_8
+
+    iptv_box_kanal_9:
+        alias: IPTV Kanal 9
+        sequence:
+        - service: python_script.broadlink_send_9
+
+    iptv_box_kanal_10:
+        alias: IPTV Kanal 10
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_0
+
+    iptv_box_kanal_11:
+        alias: IPTV Kanal 11
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_1
+
+    iptv_box_kanal_12:
+        alias: IPTV Kanal 12
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_2
+
+    iptv_box_aurosport_1:
+        alias: IPTV Eurosport 1
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_3
+
+    iptv_box_aurosport_2:
+        alias: IPTV Eurosport 2
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_4
+
+    iptv_box_sportkanalen:
+        alias: IPTV Sportkanalen
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_6
+
+    iptv_box_svt_barn:
+        alias: IPTV Svt Barn
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_9
+
+    iptv_box_svt_barnkanalen:
+        alias: IPTV Barnkanalen
+        sequence:
+        - service: python_script.broadlink_send_1
+        - service: python_script.broadlink_send_9
+
+    iptv_box_disney_channel:
+        alias: IPTV Disney Channel
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_0
+
+    iptv_box_cartoon_network:
+        alias: IPTV Cartoon Network
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_1
+
+    iptv_box_disney_junior:
+        alias: IPTV Disnet Junior
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_2
+
+    iptv_box_nickelodeonk:
+        alias: IPTV Nickelofeon
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_3
+
+    iptv_box_nicktoons:
+        alias: IPTV Nicktoons
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_4
+
+    iptv_box_disney_xd:
+        alias: IPTV Disney XD
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_5
+
+    iptv_box_nick_jr:
+        alias: IPTV Nick JR
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_6
+
+    iptv_box_discovery_science:
+        alias: IPTV Discovery Sience
+        sequence:
+        - service: python_script.broadlink_send_2
+        - service: python_script.broadlink_send_8
+
+    iptv_box_svt_kunskapskanalen:
+        alias: IPTV Svt Kunskapskanalen
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_0
+
+    iptv_box_kunskapskanalen:
+        alias: IPTV Kunskapskanalen
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_0
+
+    iptv_box_discovety:
+        alias: IPTV Discovery
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_1
+
+    iptv_box_animal_planet:
+        alias: IPTV Animal Planet
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_2
+
+    iptv_box_national_geographic:
+        alias: IPTV National Geographic
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_3
+
+    iptv_box_nat_geo_wild:
+        alias: IPTV Nat Geo Wild
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_4
+
+    iptv_box_history_channel:
+        alias: IPTV History Channel
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_6
+
+    iptv_box_bbc_earth:
+        alias: IPTV BBC Earth
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_7
+
+    iptv_box_tv4_fakta:
+        alias: IPTV TV4 Fakta
+        sequence:
+        - service: python_script.broadlink_send_3
+        - service: python_script.broadlink_send_8
+
+    iptv_box_sf_kanalen:
+        alias: IPTV SF Kanalen
+        sequence:
+        - service: python_script.broadlink_send_4
+        - service: python_script.broadlink_send_3
+
+    iptv_box_tv4_film:
+        alias: IPTV TV4 Film
+        sequence:
+        - service: python_script.broadlink_send_4
+        - service: python_script.broadlink_send_4
+
+    iptv_box_tv4_guld:
+        alias: IPTV TV4 Guld
+        sequence:
+        - service: python_script.broadlink_send_4
+        - service: python_script.broadlink_send_5
+
+    iptv_box_bbc_world:
+        alias: IPTV BBC World
+        sequence:
+        - service: python_script.broadlink_send_4
+        - service: python_script.broadlink_send_6
+
+    iptv_box_bbc_brit:
+        alias: IPTV BBC Brit
+        sequence:
+        - service: python_script.broadlink_send_4
+        - service: python_script.broadlink_send_7
+
+    iptv_box_sky_news:
+        alias: IPTV Sky News
+        sequence:
+        - service: python_script.broadlink_send_4
+        - service: python_script.broadlink_send_9
+
+    iptv_box_cnn:
+        alias: IPTV CNN
+        sequence:
+        - service: python_script.broadlink_send_5
+        - service: python_script.broadlink_send_0
+
+    iptv_box_travel_channel:
+        alias: IPTV Travel Channel
+        sequence:
+        - service: python_script.broadlink_send_5
+        - service: python_script.broadlink_send_1
+
+    iptv_box_mtv:
+        alias: IPTV MTV
+        sequence:
+        - service: python_script.broadlink_send_5
+        - service: python_script.broadlink_send_4
+
+    iptv_box_fox:
+        alias: IPTV FOX
+        sequence:
+        - service: python_script.broadlink_send_5
+        - service: python_script.broadlink_send_6

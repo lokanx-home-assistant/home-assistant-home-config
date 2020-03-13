@@ -1,0 +1,21 @@
+google_google:
+  tts:
+    - platform: google_translate
+      language: sv
+
+  cloud:
+    google_actions:
+      filter:
+        include_domains:
+          - light
+          - media_player
+          - script
+        include_entities:
+          - switch.telldus_tzwp_100_plug_in_switch_switch
+        exclude_entities:
+          - light.basement
+          - media_player.anton
+          - media_player.sjogren_tv
+          - media_player.sjogren_tv_2
+          - light.lampa_hallen
+          - script.deconz_refresh

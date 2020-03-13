@@ -1,0 +1,11 @@
+room_stairwell_room_upper_stairwell:
+
+  light:
+    - platform: switch
+      name: Upper Stairwell Window Light
+      entity_id: switch.telldus_tzwp_100_plug_in_switch_switch_2
+
+    - platform: group
+      name: Stairwell Lights
+      entities:
+        - light.upper_stairwell_window_light

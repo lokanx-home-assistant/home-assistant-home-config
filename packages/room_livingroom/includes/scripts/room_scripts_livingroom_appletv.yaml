@@ -1,0 +1,14 @@
+room_livingroom_room_scripts_livingroom_appltv:
+  script:    
+    apple_tv:
+      alias: Apple TV
+      sequence:
+      - data:
+          entity_id: media_player.livingroom_tv
+        service: media_player.turn_on
+      - delay: 00:00:05
+      - data:
+          entity_id: media_player.livingroom_tv
+          source: Apple TV 4K
+        service: media_player.select_source
+

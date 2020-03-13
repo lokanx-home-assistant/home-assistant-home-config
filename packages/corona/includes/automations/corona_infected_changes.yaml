@@ -1,0 +1,14 @@
+- alias: Send message if number of corona infected changes
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - entity_id: sensor.sweden_coronavirus_confirmed
+    platform: state
+  condition: []
+  action:
+  - data:
+      message: 'Number of corona infected in sweden has changed to {{ states(''sensor.sweden_coronavirus_confirmed'')
+        }}!
+        '
+      title: Corona Alert
+    service: notify.mobile_app_bphone

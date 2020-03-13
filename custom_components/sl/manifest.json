@@ -1,0 +1,9 @@
+{
+  "domain": "sl",
+  "name": "Home Assistant SL Sensor (SL)",
+  "documentation": "",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": [],
+  "homeassistant": "0.92.0"
+} 

@@ -1,0 +1,17 @@
+- alias: Livingroom Remote Off
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - device_id: 0d9857a8ba2a463ca26599c9c1d3bad8
+    domain: deconz
+    platform: device
+    subtype: turn_off
+    type: remote_button_long_press
+  condition: []
+  action:
+  - data:
+      option: las_all_off
+    entity_id: input_select.livingroom_area_scenes
+    service: input_select.select_option
+  - entity_id: scene.livingroom_area_lights_all_off
+    service: scene.turn_on

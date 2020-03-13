@@ -1,0 +1,11 @@
+room_master_bedroom_room_master_bedroom:
+  light:
+    - platform: switch
+      name: Master Bedroom Ceiling Light
+      entity_id: switch.nodeid_12_switch
+
+    # Benjamin Light group  
+    - platform: group
+      name: Master Bedroom Lights
+      entities:
+        - light.master_bedroom_ceiling_light

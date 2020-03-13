@@ -1,0 +1,43 @@
+- alias: bjorn-wake-up-routine
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: bjorn-wake-up-alarm-stopped
+  - platform: webhook
+    webhook_id: bjorn-wake-up-alarm-snooze
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.bjorn
+      state: home
+    - after: 04:00:00
+      before: 08:00:00
+      condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - condition: template
+      value_template: "{% set n = now() %}  {{  \n   (((n.month >= 1 and n.month <=\
+        \ 6) or (n.month >= 8 and n.month <= 12)))\n}}\n"
+    - condition: template
+      value_template: "{% set n = now() %}  {{  \n   (n.month != 1 or (n.month ==\
+        \ 1 and n.day >= 13))\n}}\n"
+    - condition: template
+      value_template: "{% set n = now() %}  {{  \n   (n.month != 6 or (n.month ==\
+        \ 6 and n.day <= 12))\n}}\n"
+    - condition: template
+      value_template: "{% set n = now() %}  {{  \n   (n.month != 8 or (n.month ==\
+        \ 8 and n.day >= 17))\n}}\n"
+    - condition: template
+      value_template: "{% set n = now() %}  {{  \n   (n.month != 12 or (n.month ==\
+        \ 12 and n.day <= 20))\n}}\n"
+  action:
+  - data:
+      message: '... what a wonderful day!'
+      name: Good morning Björn...
+    service: logbook.log
+  initial_state: 'on'

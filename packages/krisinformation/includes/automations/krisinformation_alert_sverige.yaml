@@ -1,0 +1,14 @@
+- alias: Krisinformation Alert Sverige
+  initial_state: 'on'
+  description: ''
+  trigger:
+  - entity_id: sensor.krisinformation_sverige
+    platform: state
+    to: Alert
+  condition: []
+  action:
+  - data:
+      title: Krisinformation Warning - Sverige
+      message: > 
+        {{states.sensor.krisinformation_sverige.attributes.messages[0].Headline}} - {{states.sensor.krisinformation_sverige.attributes.messages[0].Message}} {{states.sensor.krisinformation_sverige.attributes.messages[0].Web}}
+    service: notify.mobile_app_bphone

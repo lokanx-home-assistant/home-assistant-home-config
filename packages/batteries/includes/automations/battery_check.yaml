@@ -1,0 +1,24 @@
+- alias: Battery Check
+  description: ''
+  trigger:
+  - at: '19:00:00'
+    platform: time
+  condition:
+  - condition: or
+    conditions:
+    - condition: template
+      value_template: "{% set min_battery_level = 10 -%}           {% set ns = namespace(found=false)\
+        \ -%} {% for entity_id in states.group.battery_levels.attributes.entity_id\
+        \ -%}\n  {% set parts = entity_id.split('.') -%}\n  {% if (states(entity_id)\
+        \ | replace(\"%\",\"\") | int) < min_battery_level -%}\n    {% set ns.found\
+        \ = true -%}\n  {% endif -%}\n{% endfor -%} {{ ns.found }}\n"
+  action:
+  - data:
+      message: "{%- set min_battery_level = 10 -%} {%- for entity_id in states.group.battery_levels.attributes.entity_id\
+        \ -%}\n  {%- set parts = entity_id.split('.') -%}\n  {%- if (states(entity_id)\
+        \ | replace(\"%\",\"\") | int) < min_battery_level -%}\n    Device '{{ states[parts[0]][parts[1]].name\
+        \ }}' battery level is: {{ states(entity_id) }}.{{ '\\n' }}\n  {%- endif -%}\n\
+        {%- endfor -%}\n"
+      title: Low Battery Warning
+    service: notify.mobile_app_bphone
+  initial_state: 'on'

@@ -1,0 +1,12 @@
+icloud3_icloud3:
+  device_tracker:
+    - platform: icloud3
+      username: !secret icloud_slac_username
+      password: !secret icloud_slac_password
+      tracking_method: famshr
+      track_devices:
+        - !secret icloud_bjorn_device_def
+        - !secret icloud_annelie_device_def
+        - !secret icloud_jasmine_device_def
+    #    - !secret icloud_emms_device_def
+    #    - !secret icloud_anton_device_def

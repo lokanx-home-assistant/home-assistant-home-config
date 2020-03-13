@@ -1,0 +1,12 @@
+- alias: Turn off basement light 10 minutes after last movement
+  initial_state: 'on'
+  trigger:
+  - entity_id: binary_sensor.tradfri_motion_sensor
+    for: '10'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      entity_id: light.lampa_hallen
+    service: light.turn_off

@@ -1,0 +1,9 @@
+sl_sl:
+  sensor:
+    - platform: sl
+      name: homefruangen
+      ri4key: !secret sensor_sl_ri4key
+      si2key: !secret sensor_sl_si2key
+      siteid: !secret sensor_sl_siteid
+  #    lines: !secret sensor_sl_lines
+      direction: 1

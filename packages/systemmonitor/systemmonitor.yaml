@@ -1,0 +1,33 @@
+systemmonitor_systemmonitor:
+  sensor:
+    - platform: systemmonitor
+      resources:
+        - type: processor_use
+        - type: swap_use_percent
+        - type: memory_use_percent
+  #      - type: disk_use_percent
+        - type: memory_use
+        - type: memory_free
+        - type: load_1m
+        - type: load_5m
+        - type: load_15m
+        - type: last_boot
+  #      - type: network_in
+  #      - type: network_out
+
+  group:
+    nuc_system_monitor:
+      name: NUC System Monitor
+      entities:
+        - sensor.processor_use
+        - sensor.memory_use_percent
+        - sensor.swap_use_percent
+    #    - sensor.disk_use_percent
+        - sensor.memory_use
+        - sensor.memory_free
+        - sensor.load_1m
+        - sensor.load_5m
+        - sensor.load_15m
+        - sensor.last_boot
+    #    - sensor.network_in
+    #    - sensor.network_out

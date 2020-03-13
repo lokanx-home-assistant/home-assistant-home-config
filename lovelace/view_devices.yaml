@@ -1,0 +1,25 @@
+title: Devices
+cards:      
+  - type: entities
+    title: Björn iPhone X
+    show_header_toggle: false
+    entities:
+      - sensor.battery_level
+      - sensor.battery_state
+      - device_tracker.bphone_wrt
+      - device_tracker.bphone_bt
+      - device_tracker.bphone_mobile_app
+      - device_tracker.bphone
+  - type: custom:group-card
+    card:
+      type: entities
+      title: My Volvo
+      show_header_toggle: false
+    group: group.car_monitor_myvolvo
+  - type: custom:group-card
+    card:
+      type: entities
+      title: QNAP Monitor (Gollum)
+      show_header_toggle: false
+    group: group.qnap_monitor_gollum
+      

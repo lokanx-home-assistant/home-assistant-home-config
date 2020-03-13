@@ -1,0 +1,2 @@
+person_jasmine_automations:
+  automation manual: !include_dir_merge_list includes/automations_jasmine

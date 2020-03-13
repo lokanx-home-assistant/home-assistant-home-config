@@ -1,0 +1,20 @@
+asuswrt_asuswrt:
+  asuswrt:
+    host: 192.168.1.1
+    port: 22
+    username: !secret asuswrt_username
+    password: !secret asuswrt_password
+    protocol: ssh
+    mode: router
+    sensors:
+      - upload
+      - download
+      - upload_speed
+      - download_speed
+
+  device_tracker:
+    - platform: asuswrt
+      interval_seconds: 60
+      consider_home: 600
+      new_device_defaults:
+          track_new_devices: false

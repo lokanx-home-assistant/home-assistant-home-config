@@ -1,0 +1,109 @@
+title: General
+cards:
+- type: entities
+  title: Familly
+  show_header_toggle: false
+  entities:
+    - person.bjorn
+    - person.annelie
+    - person.anton
+    - person.emma
+    - person.jasmine
+- type: map
+  title: Familly
+  aspect_ratio: 16:9
+  default_zoom: 8
+  entities:
+    - person.emma
+    - person.jasmmine
+    - person.anton
+    - person.annelie
+    - person.bjorn
+- type: "custom:sl-card"
+  departures: true
+  deviations: true
+  updated: true
+  adjust_times: true
+  hide_departured: false
+  name: Segeltorp --> Fruängen
+  entities:
+    - sensor.sl_homefruangen
+- type: weather-forecast
+  entity: weather.smhi_segeltorp_2
+- type: entities
+  title: Sensors
+  show_header_toggle: false
+  entities:
+    - sensor.yr_symbol
+    - sun.sun
+    - sensor.daylight
+    - entity: sensor.aeotec_zw074_multisensor_gen5_temperature
+      name: Home Temprature (Front)
+    - entity: sensor.aeotec_zw074_multisensor_gen5_temperature_2
+      name: Home Temprature (Back)
+- type: "custom:krisinfo-card"
+  entity: sensor.krisinformation_stockholm
+- type: "custom:krisinfo-card"
+  entity: sensor.krisinformation_sverige
+- type: entities
+  title: Corona
+  show_header_toggle: false
+  entities:
+    - sensor.coronavirus_bekraftade_sverige
+    - entity: sensor.system_space_entity
+      name: " "
+    - sensor.sweden_coronavirus_confirmed
+    - sensor.sweden_coronavirus_current
+    - sensor.sweden_coronavirus_deaths
+    - sensor.sweden_coronavirus_recovered
+    - entity: sensor.system_space_entity
+      name: " "
+    - sensor.worldwide_coronavirus_confirmed
+    - sensor.worldwide_coronavirus_current
+    - sensor.worldwide_coronavirus_deaths
+    - sensor.worldwide_coronavirus_recovered
+- type: entities
+  title: Corona Sweden Detailed
+  show_header_toggle: false
+  entities:
+    - entity: sensor.covid_19_sverige
+      name: Last Updated
+    - entity: sensor.covid_19_sverige_totala_antalet
+      name: Total
+    - entity: sensor.covid_19_sverige_regionstockholm
+      name: Stockholm
+    - entity: sensor.covid_19_sverige_vastragotalandsregionen
+      name: Västra Götaland
+    - entity: sensor.covid_19_sverige_regionskane
+      name: Skåne
+    - entity: sensor.covid_19_sverige_regionuppsala
+      name: Uppsala
+    - entity: sensor.covid_19_sverige_regionvasternorrland
+      name: Västernorrland
+    - entity: sensor.covid_19_sverige_regionhalland
+      name: Halland
+    - entity: sensor.covid_19_sverige_regionorebrolan
+      name: Örebro Län
+    - entity: sensor.covid_19_sverige_regiongavleborg
+      name: Gävleborg
+    - entity: sensor.covid_19_sverige_regionnorrbotten
+      name: Norrbotten
+    - entity: sensor.covid_19_sverige_regionsodermanland
+      name: Södermanland
+    - entity: sensor.covid_19_sverige_regionostergotland
+      name: Östergötland
+    - entity: sensor.covid_19_sverige_regionkalmarlan
+      name: Kalmar Län
+    - entity: sensor.covid_19_sverige_regionkronoberg
+      name: Kronoberg
+    - entity: sensor.covid_19_sverige_regionjamtlandharjedalen
+      name: Jämtland/Härjedalen
+    - entity: sensor.covid_19_sverige_regiondalarna
+      name: Dalarna
+    - entity: sensor.covid_19_sverige_blekinge
+      name: Blekinge
+    - entity: sensor.covid_19_sverige_regionvastmanland
+      name: Västmanland
+    - entity: sensor.covid_19_sverige_regiongotland
+      name: Gotland
+

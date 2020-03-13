@@ -1,0 +1,7 @@
+title: Alarm
+cards:      
+  - type: entities
+    title: Control
+    show_header_toggle: false
+    entities:
+      - input_boolean.alarm_armed

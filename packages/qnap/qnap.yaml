@@ -1,0 +1,39 @@
+qnap_qnap:
+  sensor:
+    - platform: qnap
+  #    name: Gollum
+      host: 192.168.1.222
+      port: 443
+      username: !secret sensor_qnap_username
+      password: !secret sensor_qnap_password
+      ssl: true
+      verify_ssl: false
+      monitored_conditions:
+        - status
+        - cpu_usage
+        - cpu_temp
+        - memory_percent_used
+        - network_tx
+        - volume_percentage_used
+        - drive_smart_status
+        - drive_temp
+
+  group:
+    qnap_monitor_gollum:
+      name: QNAP Monitor 
+      entities:
+        - sensor.gollum_status 
+        - sensor.gollum_cpu_temperature
+        - sensor.gollum_cpu_usage
+        - sensor.gollum_memory_usage
+        - sensor.gollum_network_up_eth0
+        - sensor.gollum_network_up_eth1
+        - sensor.gollum_smart_status_drive_0_1
+        - sensor.gollum_smart_status_drive_0_2
+        - sensor.gollum_smart_status_drive_0_3
+        - sensor.gollum_smart_status_drive_0_4
+        - sensor.gollum_temperature_drive_0_1
+        - sensor.gollum_temperature_drive_0_2
+        - sensor.gollum_temperature_drive_0_3
+        - sensor.gollum_temperature_drive_0_4
+        - sensor.gollum_volume_used_datavol1

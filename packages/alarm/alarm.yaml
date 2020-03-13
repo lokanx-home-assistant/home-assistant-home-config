@@ -1,0 +1,8 @@
+alarm_alarm:
+  automation manual: !include_dir_merge_list includes/automations
+
+  input_boolean:
+    alarm_armed:
+      name: Alarm Armed
+      initial: off
+      icon: mdi:alarm-light

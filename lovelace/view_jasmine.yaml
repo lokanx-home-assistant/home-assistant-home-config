@@ -1,0 +1,19 @@
+title: Jasmine
+cards:     
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.jasmine_ceiling_light
+        name: Ceiling Light
+  - type: entities
+    title: Power Swiches
+    show_header_toggle: false
+    entities:
+      - switch.powerswitch01
+  - type: entities
+    title: CMEE Watch
+    show_header_toggle: false
+    entities:
+      - device_tracker.cmee_6204836272
+      - sensor.cmee_6204836272_battery
+      

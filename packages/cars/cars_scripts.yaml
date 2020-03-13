@@ -1,0 +1,15 @@
+cars_scripts_cars_scripts:
+  script:
+    myvolvo_engine_start:
+      alias: Starta Bilen
+      sequence:
+        data:
+          entity_id: switch.myvolvo_engine
+        service: switch.turn_on
+    myvolvo_engine_stop:
+      alias: Stoppa Bilen
+      sequence:
+        data:
+          entity_id: switch.myvolvo_engine
+        service: switch.turn_off
+

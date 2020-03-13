@@ -1,0 +1,7 @@
+title: Upper Stairwell
+cards:      
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.upper_stairwell_window_light
+        name: Upper Stairwell Window Light

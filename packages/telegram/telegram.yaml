@@ -1,0 +1,12 @@
+telegram_telegram:
+
+  telegram_bot:
+    - platform: polling
+      api_key: !secret telegram_bot_api_key
+      allowed_chat_ids:
+        - !secret telegram_chat_id_bot_lokanx_ha
+
+  notify:
+    - platform: telegram
+      name: NOTIFIER_TELEGRAM_EVENTS
+      chat_id: !secret telegram_chat_id_bot_lokanx_ha

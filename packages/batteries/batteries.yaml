@@ -1,0 +1,10 @@
+batteries_batteries:
+  group:
+    battery_levels:
+      name: Battery Levels
+      entities:
+        - sensor.motion_hallen_battery_level
+        - sensor.motionbenjamin_battery_level
+        - sensor.livingroomonoffswitch_battery_level
+
+  automation manual: !include_dir_merge_list includes/automations

@@ -1,0 +1,24 @@
+panel_iframe_links:
+  panel_iframe:
+    deconz:
+      title: deCONZ
+      icon: mdi:wrench
+      require_admin: true
+      url: http://192.168.1.191:9080/pwa/index.html
+    deconz:
+      title: ZWave2MQTT
+      icon: mdi:wrench
+      require_admin: true
+      url: http://192.168.1.191:8091/
+    configurator:
+      title: Editor
+      icon: mdi:wrench
+      require_admin: true
+      url: http://192.168.1.191:9180
+    nodered:
+      title: Node-Red
+      icon: mdi:wrench
+      require_admin: true
+      url: http://192.168.1.191:1880
+
+

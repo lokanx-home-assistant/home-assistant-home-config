@@ -1,0 +1,12 @@
+room_benjamin_room_benjamin:
+  light:
+    - platform: switch
+      name: Benjamin Window Light
+      entity_id: switch.telldus_tzwp_100_plug_in_switch_switch
+
+    # Benjamin Light group  
+    - platform: group
+      name: Benjamin Lights
+      entities:
+        - light.lightbenjamin
+        - light.benjamin_window_light

@@ -1,0 +1,12 @@
+surveillance_surveillance:
+
+  automation manual: !include_dir_merge_list includes/automations
+
+  camera:
+   - platform: local_file
+     file_path: /srv/shared-data/image_detection/tensorflow_ma_front_latest.jpg
+     name: Person Detection Front - Tensorflow
+   - platform: local_file
+     file_path: /srv/shared-data/image_detection/tensorflow_ma_back_latest.jpg
+     name: Person Detection Back - Tensorflow
+

@@ -1,0 +1,15 @@
+- alias: Motion Back Detected - Notify On
+  trigger:
+  - entity_id: binary_sensor.aeotec_zw074_multisensor_gen5_sensor_2
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      payload: 'on'
+      qos: '0'
+      retain: 'false'
+      topic: homeassistant/motiondetected/back
+    service: mqtt.publish
+  initial_state: 'on'
+

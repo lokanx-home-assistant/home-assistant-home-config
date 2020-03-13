@@ -1,0 +1,10 @@
+title: Annelie & Björn
+cards:     
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.nodeid_12_dimmer
+        name: Ceiling Light Dimmer
+      - entity: switch.nodeid_12_switch
+        name: Ceiling Light Switch
+

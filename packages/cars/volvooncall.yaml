@@ -1,0 +1,44 @@
+cars_volvooncall:
+  volvooncall:
+    username: !secret volvooncall_username
+    password: !secret volvooncall_password
+    scandinavian_miles: true
+    name:
+      !secret volvooncall_vin_number: myvolvo
+
+  group:
+    car_monitor_myvolvo:
+      name: My Volvo Monitor
+      entities:
+        - !secret myvolvo_device_tracker_entity_id
+        - lock.myvolvo_door_lock
+        - sensor.myvolvo_fuel_amount
+        - sensor.myvolvo_fuel_level
+        - sensor.myvolvo_fuel_consumption
+        - sensor.myvolvo_last_trip
+        - sensor.myvolvo_odometer
+        - sensor.myvolvo_range
+        - sensor.myvolvo_trip_meter_1
+        - sensor.myvolvo_trip_meter_2
+        - switch.myvolvo_engine
+        - switch.myvolvo_heater
+        - binary_sensor.myvolvo_washer_fluid
+        - binary_sensor.myvolvo_service
+        - binary_sensor.myvolvo_brake_fluid
+        - binary_sensor.myvolvo_bulbs
+        - binary_sensor.myvolvo_engine
+        - binary_sensor.myvolvo_doors
+        - binary_sensor.myvolvo_front_left_door
+        - binary_sensor.myvolvo_front_right_door
+        - binary_sensor.myvolvo_rear_left_door
+        - binary_sensor.myvolvo_rear_right_door
+        - binary_sensor.myvolvo_front_left_tyre
+        - binary_sensor.myvolvo_front_right_tyre
+        - binary_sensor.myvolvo_rear_left_tyre
+        - binary_sensor.myvolvo_rear_right_tyre
+        - binary_sensor.myvolvo_windows
+        - binary_sensor.myvolvo_front_right_window
+        - binary_sensor.myvolvo_rear_left_window
+        - binary_sensor.myvolvo_rear_right_window
+        - binary_sensor.myvolvo_front_left_window
+        - binary_sensor.myvolvo_hood
