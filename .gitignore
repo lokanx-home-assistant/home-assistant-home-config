@@ -21,6 +21,7 @@
 !lovelace/**
 !packages/**
 !python_scripts/**
+!python_scripts_x/**
 
 # Include gitignore
 !.gitignore
