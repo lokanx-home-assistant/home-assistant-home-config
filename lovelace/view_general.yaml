@@ -69,7 +69,7 @@ cards:
     - entity: sensor.covid_19_sverige
       name: Last Updated
     - entity: sensor.covid_19_sverige_totala_antalet
-      name: Total
+      name: Sverige Totalt
     - entity: sensor.covid_19_sverige_regionstockholm
       name: Stockholm
     - entity: sensor.covid_19_sverige_vastragotalandsregionen

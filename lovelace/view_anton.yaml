@@ -2,3 +2,5 @@ title: Anton
 cards:     
   - type: media-control
     entity: media_player.anton
+  - type: media-control
+    entity: media_player.anton_tv

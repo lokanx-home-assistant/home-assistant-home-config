@@ -1,2 +1,10 @@
 room_anton_room_anton:
   light:
+
+  samsungtv:
+    - host: 192.168.1.195
+      name: Anton TV
+      turn_on_action:
+        - service: wake_on_lan.send_magic_packet
+          data:
+            mac: "B8:BB:AF:C2:DB:E7"

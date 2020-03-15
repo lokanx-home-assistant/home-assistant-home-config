@@ -14,7 +14,7 @@ corona_corona:
       name: COVID-19-Sverige
       scan_interval: 15
       json_attributes:
-        - "Totala antalet"
+        - "Totalaantalet"
     #    - lastupdate
         - Stockholm
         - VastraGotaland
@@ -42,7 +42,7 @@ corona_corona:
     - platform: template
       sensors:
         covid_19_sverige_totala_antalet: 
-          value_template: '{{ states.sensor.covid_19_sverige.attributes["Totala antalet"] }}'
+          value_template: '{{ states.sensor.covid_19_sverige.attributes["Totalaantalet"] }}'
           unit_of_measurement: 'Personer'
         covid_19_sverige_regionstockholm: 
           value_template: '{{ states.sensor.covid_19_sverige.attributes["Stockholm"] }}'

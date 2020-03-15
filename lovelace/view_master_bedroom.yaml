@@ -3,8 +3,8 @@ cards:
   - type: entities
     title: Lights
     entities:
-      - entity: light.nodeid_12_dimmer
+      - entity: light.nodeid_13_dimmer
         name: Ceiling Light Dimmer
-      - entity: switch.nodeid_12_switch
-        name: Ceiling Light Switch
+#      - entity: switch.nodeid_13_switch
+#        name: Ceiling Light Switch
 
